@@ -13,15 +13,25 @@
             <h1>MEDAMBULANCE</h1> 
         </div>
     </div>
+    <script>
+        function checkName(event) {
+            var nameInput = document.getElementById('name');
+            
+            if (nameInput.value.trim() === '') {
+                alert('Please enter your name.');
+                event.preventDefault(); // Prevent the form from submitting
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="white">
         <div class="white1">
             <div class="data">
             <h1 class="head" id="si">SIGN-UP</h1>
-            <form action="sign">
+            <form onsubmit="checkName(event)" action="next_page.html" method="post">
                 <label>Enter your name:</label><br>
-                <input type="text" name="name" class="pad" required><br>
+                <input type="text" name="name" class="pad" for="name"  required><br>
                 <label>Enter your password:</label><br>
                 <input type="password" name="pass" class="pad" required><br>
                 <label>Re-enter your password:</label><br>
@@ -38,7 +48,7 @@
                 <input type="number" name="number" class="pad" required><br>
                 <label>Enter your E-mail:</label><br>
                 <input type="email" name="mail" class="pad" required><br>
-                <button id="submit" onclick="document.location='https://rawcdn.githack.com/yaashwin/finalyear/e6a221546065264b0d8d5f75b76f165b49396076/login.html'">SUBMIT</button>
+                <button class="SIGN-UP" onclick="document.location='https://rawcdn.githack.com/yaashwin/finalyear/e6a221546065264b0d8d5f75b76f165b49396076/login.html'">SUBMIT</button>
             </form>
         </div>
         </div>
