@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: white;
+}
+.left{
+    display: flex;
+    justify-content: space-between;
+    background-color: #EEEEEE;
+}
+.left, .right {
+    flex: 1;
+}
+.smallleft, .smallright {
+    flex: 1;
+}
+.smallright{
+    margin-right: 400px;
+    margin-top: 30px;
+}
+.smallleft{
+    margin-top: 5px;
+    margin-left: 400px;
+}
+.head{
+    text-align: center;
+    color: #0666;
+}
+body{
+    background-image: url("medicalback.jpeg");
+    height: 700px;
+}
+.white{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.white1{
+    height: 650px;
+    width: 300px;
+    background-color: white;
+    border-radius: 20px;
+}
+.data{
+    padding: 20px 50px 20px 50px;
+}
+.pad{
+    margin-bottom: 20px;
+}
+#si{
+    margin-bottom: 20px;
+}
+#submit{
+    background-color: skyblue;
+    padding: 0 30px 0px 20px;
+    border-radius: 20px;
+    width: 120px;
+    height: 40px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+.footer{
+    padding: 20px;
+    text-align: center;
+    background-color: #EEEEEE;
+}
+input:hover{
+    transform: scale(1.1);
+}

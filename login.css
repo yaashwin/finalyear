@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: white;
+}
+.left{
+    display: flex;
+    justify-content: space-between;
+    background-color: #EEEEEE;
+}
+.smallright{
+    margin-right: 400px;
+    margin-top: 30px;
+    flex: 1;
+}
+.smallleft{
+    margin-top: 5px;
+    margin-left: 400px;
+    flex: 1;
+}
+body{
+    background-image: url("medicalback.jpeg");
+    height: 700px;
+}
+.white{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.white1{
+    height: 250px;
+    width: 600px;
+    background-color: white;
+    border-radius: 20px;
+    text-align: center;
+    /*background-image: url(wp4331279.webp);*/
+}
+.data{
+    padding: 20px 50px 20px 50px;
+}
+#si{
+    margin-bottom: 20px;
+}
+input:hover{
+    transform: scale(1.1);
+}
+#submit{
+    background-color: skyblue;
+    padding: 0 30px 0px 20px;
+    border-radius: 20px;
+    width: 120px;
+    height: 40px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+.data{
+    padding: 20px 50px 20px 50px;
+}
+.pad{
+    margin-bottom: 20px;
+}
+.head{
+    text-align: center;
+    color: #0666;
+}
+footer{
+    margin-top: 195px;
+}
+.footer{
+    padding: 20px;
+    text-align: center;
+    background-color: #EEEEEE;
+}
+html{
+    background-color: #EEEEEE;
+}

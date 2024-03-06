@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: white;
+}
+.head{
+    display: flex;
+    justify-content: space-between;
+    background-color: #EEEEEE;
+}
+.flex{
+    padding: 45px 50px 50px 30px;
+    transform: scale(1.5);
+   
+}
+.right{
+    display: flex;
+    flex-direction: row;
+}
+.left{
+    display: flex;
+    justify-content: space-between;
+}
+.left, .right {
+    flex: 1;
+}
+.smallleft, .smallright {
+    flex: 1;
+}
+.smallright{
+    margin-right: 200px;
+    margin-top: 30px;
+}
+.smallleft{
+    margin-top: 5px;
+    margin-left: 5px;
+}
+.flex:hover{
+    box-shadow: 0 0 10px #F59A9A;
+}
+/* body */
+.body{
+    display: flex;
+    justify-content: space-between;
+}
+.bodyleft, .bodyright {
+    flex: 1;
+}
+.bodyleft{
+    text-align: center;
+}
+.SIGN-UP{
+    background-color: #FF0000;
+    width: 400px;
+    height: 50px;
+    border-radius: 20px;
+}
+.LOG-IN{
+    background-color: #FF0000;
+    width: 400px;
+    height: 50px;
+    border-radius: 20px;
+}
+b{
+    color: skyblue;
+}
+.EM{
+    padding: 20px;
+}
+.or{
+    font-size: 20px;
+}
+html,.footer{
+    background-color: #EEEEEE;
+}
+.footer{
+    padding: 20px;
+    text-align: center;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+  
+  .flex:hover .popup-message {
+    display: block;
+  }
+  .SIGN-UP:hover{
+    background-color: orangered;
+  }
+  .LOG-IN:hover{
+    background-color: orangered;
+  }
