@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Your CSS styles */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: white;
+            background-image: url(medicalback.jpeg);
+        }
+
+        .left {
+            display: flex;
+            justify-content: space-between;
+            background-color: #EEEEEE;
+        }
+
+        .smallright {
+            margin-right: 400px;
+            margin-top: 30px;
+            flex: 1;
+        }
+
+        .smallleft {
+            margin-top: 5px;
+            margin-left: 400px;
+            flex: 1;
+        }
+
+        .body {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .bodyright {
+            height: 250px;
+            width: 600px;
+            background-color: white;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        #submit {
+            background-color: skyblue;
+            padding: 0 30px 0px 20px;
+            border-radius: 20px;
+            width: 120px;
+            height: 40px;
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        .pad {
+            margin-bottom: 20px;
+        }
+
+        input:hover {
+            transform: scale(1.1);
+        }
+
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background-color: #EEEEEE;
+        }
+
+        footer {
+            margin-top: 135px;
+        }
+    </style>
+</head>
+<body>
+    <div class="left">
+        <div class="smallleft">
+            <img src="header.jpg" height="100px" width="100px">
+        </div>
+        <div class="smallright">
+            <h1>MEDAMBULANCE</h1> 
+        </div>
+    </div>
+
+    <div class="body">
+        <div class="bodyright">
+            <br><br>
+            <form>
+                <label>Enter the vehicle number:</label>
+                <input type="text" name="vehicle" required class="pad"><br><br>
+                <label>Enter the otp generated </label>
+                <input type="number" name="otp" required class="pad"><br><br>
+                <input type="button" id="submit" class="pad" value="Submit" onclick="checkOTP()">
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer">
+            <p>For further information<br><b>contact:</b> 9361326149
+            <b>E-mail:</b>muhammedyaashwin@gmail.com</p>
+        </div>
+    </footer>
+
+    <script>
+        function checkOTP() {
+            var enteredOTP = document.getElementsByName('otp')[0].value;
+            if (enteredOTP === '1122') {
+                alert('OTP is successful!');
+            } else {
+                alert('Invalid OTP. Please try again.');
+            }
+        }
+    </script>
+</body>
+</html>
