@@ -109,8 +109,23 @@
 
     <script>
         function checkOTP() {
+            var enteredname = document.getElementsByName('vehicle')[0].value;
             var enteredOTP = document.getElementsByName('otp')[0].value;
-            if (enteredOTP === '1122') {
+            let s=0;
+            let arr=new Array (1122,1012,2022,2002,2089,3456,4534,5634,6432,7843,8800,9789);
+            let arr1=new Array("kl10ab8673","tn02ch1100");
+            for(var i=0;i<12;i++)
+            {
+                if(arr[i]==enteredOTP)
+                {
+                    s+=1;
+                }
+            }
+            if(arr1[0]==enteredname ||arr1[1]==enteredname)
+            {
+                s+=1;
+            }
+            if (s === 2) {
                 alert('OTP is successful!');
             } else {
                 alert('Invalid OTP. Please try again.');
