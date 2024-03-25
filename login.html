@@ -20,12 +20,12 @@
         <div class="white1">
             <div class="data">
             <h1 class="head" id="si">LOG-IN</h1>
-            <form action="sign">
+            <form onsubmit="return validateForm()">
                 <label>Enter your Mob/E-mail:</label><br>
-                <input type="text" name="name" class="pad" required><br>
+                <input type="text" id="username" class="pad" required><br>
                 <label>Enter your password:</label><br>
-                <input type="password" name="pass" class="pad" required><br>
-                <input type="submit" id="submit" onclick="document.location='https://rawcdn.githack.com/yaashwin/finalyear/7c584f30f4368df8f15491674a0eae53d37bdba5/check.html'">
+                <input type="password" id="password" class="pad" required><br>
+                <input type="submit" id="submit" value="Submit">
             </form>
         </div>
         </div>
@@ -37,4 +37,20 @@
         <b>E-mail:</b>muhammedyaashwin@gmail.com</p>
     </div>
 </footer>
+<script>
+    function validateForm() {
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+
+        if (username === 'yaashwin' && password === 'yaashwin2002') {
+            // Redirect to the next page
+            window.location.href = 'https://rawcdn.githack.com/yaashwin/finalyear/7c584f30f4368df8f15491674a0eae53d37bdba5/check.html';
+            return false; // Prevent form submission
+        } else {
+            // Show an alert box
+            alert('Invalid user');
+            return false; // Prevent form submission
+        }
+    }
+</script>
 </html>
