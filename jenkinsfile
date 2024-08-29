@@ -1,0 +1,85 @@
+pipeline { 
+
+    agent any 
+
+  
+
+    environment { 
+
+        // Define environment variables 
+
+        HTTPS://GITHUB.COM/YAASHWIN/FINALYEAR.GIT = 'https://github.com/your-username/your-repository.git' 
+
+        /TMP/WEBSITE = '/tmp/website-repo' 
+
+        APACHE-SERVER:/USR/LOCAL/APACHE2/HTDOCS/ = '/usr/local/apache2/htdocs/' 
+
+    } 
+
+  
+
+    stages { 
+
+        stage('Checkout Code') { 
+
+            steps { 
+
+                script { 
+
+                    // Clean up any previous clone 
+
+                    sh "rm -rf ${/TMP/WEBSITE}" 
+
+  
+
+                    // Clone the repository 
+
+                    git url: "${HTTPS://GITHUB.COM/YAASHWIN/FINALYEAR.GIT}", branch: 'main' 
+
+                } 
+
+            } 
+
+        } 
+
+  
+
+        stage('Update Apache Server') { 
+
+            steps { 
+
+                script { 
+
+                    // Remove existing HTML files in Apache document root 
+
+                    sh "sudo rm -rf ${APACHE-SERVER:/USR/LOCAL/APACHE2/HTDOCS/}*" 
+
+  
+
+                    // Copy the new files from the repository to Apache document root 
+
+                    sh "sudo cp -r ${/TMP/WEBSITE}/* ${APACHE-SERVER:/USR/LOCAL/APACHE2/HTDOCS/}" 
+
+                } 
+
+            } 
+
+        } 
+
+    } 
+
+  
+
+    post { 
+
+        always { 
+
+            // Clean up workspace 
+
+            cleanWs() 
+
+        } 
+
+    } 
+
+} 
